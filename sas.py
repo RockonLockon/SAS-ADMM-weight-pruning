@@ -368,13 +368,6 @@ def retrain(cnn,paras):
             loss.backward()
             W_grad_keep_zero(cnn,Wzero_index)
             optimizer.step()
-            # if (batch_idx + 1) % 40 == 0:
-            #     print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-            #         epoch, batch_idx * len(data), len(train_loader.dataset),
-            #                100. * batch_idx / len(train_loader), loss.item()))
-            #     print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-            #         epoch, batch_idx * len(data), len(train_loader.dataset),
-            #                100. * batch_idx / len(train_loader), loss.item()),file=open(filename,'a'))
         value = validate(cnn,DCL)
         accList.append(value['top1'].avg)
         new_lr = optimizer.state_dict()['param_groups'][0]['lr']
