@@ -179,6 +179,7 @@ def dataSeting2(dataPath, batch_size, workers=0, pin_mem=True):
     test_loader = torch.utils.data.DataLoader(cifar10_test, batch_size=batch_size, shuffle=False, num_workers=workers, pin_memory=pin_mem)
     return cifar10_train, cifar10_test, test_loader
 
+
 def plot_hist(cnn,saveName = False):
     W_matrix = get_W_matrix(cnn)
     count = 0
