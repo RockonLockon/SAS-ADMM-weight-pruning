@@ -20,13 +20,12 @@ def main():
             paras['miniBatch'] = 256
             paras['q'] = 1.1
             paras['device'] = device
-            dataPath = r'E:\2 文档\袁铭的文件\pytorch-sas-pruning\data'
+            dataPath = r'\data'
             train_dataset, test_dataset, test_loader = dataSeting2(dataPath, 256, 0, True)
             paras['train_dataset'] = train_dataset
 
-            pa = r'E:\2 文档\袁铭的文件\pytorch-sas-pruning\resNet32-cifar10'
-            path = pa + r'\History'
-            pathmodel = pa + '\model'
+            path = r'\History'
+            pathmodel = r'\model'
             valueList = [paras['beta'], paras['lambda_1'], paras['maxIter'], paras['v'], paras['k0']]
             nameList = ['beta', 'lambda_1', 'maxIter', 'v', 'k0']
             nameList = [nameList[i] + str(v) for i, v in enumerate(valueList)]
