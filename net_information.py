@@ -1,7 +1,6 @@
 import torch
 from Net_Model import *
 import numpy as np
-import sas1 as sas
 
 
 def zeroNum(W):
