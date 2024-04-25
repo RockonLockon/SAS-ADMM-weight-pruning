@@ -1,12 +1,11 @@
 import time
 import torch
-from pruning_retrain import printFun
+from pruning_retrain import printFun, validate
 from torch import optim
 import os
 from matplotlib import pyplot
 from Net_Model import *
 from math import ceil
-from pruning_retrain import validate
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 cat = torch.cat
