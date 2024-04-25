@@ -42,12 +42,12 @@ def printModelFun(filename, cnn, percentlist):
     W = sas.to_flat(get_W_matrix(cnn))
     printFun(W)
 
-    print('  pruning后:')
+    print('  After pruning:')
     percentPrun(get_W_matrix(cnn), percentlist)
     W = sas.to_flat(get_W_matrix(cnn))
     printFun(W)
 
-    print('  训练后:')
+    print('  After retraining:')
     trainForPruning(cnn, get_W_matrix(cnn), traintimes=30, printspan=600, corretFlag=True)  # 15times
     W = sas.to_flat(get_W_matrix(cnn))
     printFun(W)
