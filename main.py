@@ -1,6 +1,6 @@
 from torch import optim
 from sas import *
-from pruning_retrain import *
+from net_information import *
 import os
 from Net_Model import *
 
