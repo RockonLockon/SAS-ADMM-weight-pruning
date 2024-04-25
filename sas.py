@@ -4,7 +4,7 @@ from pruning_retrain import printFun
 from torch import optim
 import os
 from matplotlib import pyplot
-from resNet18 import *
+from Net_Model import *
 from math import ceil
 from pruning_retrain import validate
 
