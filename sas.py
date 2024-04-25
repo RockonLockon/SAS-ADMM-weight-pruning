@@ -1,6 +1,6 @@
 import time
 import torch
-from pruning_retrain import printFun, validate
+from net_information import printFun, validate
 from torch import optim
 import os
 from matplotlib import pyplot
